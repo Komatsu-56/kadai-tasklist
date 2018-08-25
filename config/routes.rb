@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :new, :create]
-  resources :tasks, only: [:create, :destroy]
+  resources :tasks, only: [:create, :destroy, :edit]
 end
