@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :require_user_logged_in
-  before_action :correct_user, only: [:destroy]
+  before_action :correct_user, only: [:edit,:show,:destroy]
   
   def show
     @task = current_user.tasks.find_by(id: params[:id])
